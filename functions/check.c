@@ -6,32 +6,53 @@
 
 #include<stdio.h>
 
-void check(int);
-void prime(int);
+int check(int);
+int prime(int);
 
 int main(){
-    int num;
+    int num , res;
 
     printf("Enter number: ");
     scanf("%d",&num);
 
-    check(num);
+    res = check(num);
 
+    if(res == 0){
+        printf("Number is prime number..");
+    }
+    else{
+        printf("Number is not a prime number..");
+    }
     return 0;
 
 }
 
-void check(int num){
-
-    while(num < 0){
-        printf("Number is negative.. Please re-enter number..");
-        scanf("%d",num);
+int check(int num){
+    int ans;
+    while(num<0){
+        printf("Number is negative.. Please re-enter number..\n");
+        scanf("%d",&num);
 
     }
-    prime(num);
+    ans = prime(num);
+    return ans;
 }
 
-void prime(int num){
+int prime(int num){
 
-    
+    int div = 2 , flag = 0;
+    while(div < num/2){
+        if (num % div ==0){
+            flag = 1;
+            //printf("Number is not prime..");
+            return 1;
+            break;
+        }
+        div++;
+    }
+    if (flag == 0)
+    {
+      //printf("Number is a prime number.");
+      return 0;
+    }
 }
