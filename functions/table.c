@@ -15,13 +15,13 @@ int main(){
     printf("\nData type \t size in bytes\n");
 
     charline(len,ch);
-    printf("\nInteger \t 4\n");
+    printf("\nInteger \t %d\n",sizeof(int));
 
     charline(len,ch);
-    printf("\nCharacter \t 1\n");
+    printf("\nCharacter \t %d\n",sizeof(char));
 
     charline(len,ch);
-    printf("\nFloat \t\t 4\n");
+    printf("\nFloat \t\t %d\n",sizeof(float));
     charline(len,ch);
 
     return 0;
