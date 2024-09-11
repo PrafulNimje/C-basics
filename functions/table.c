@@ -24,7 +24,7 @@ int main(){
     printf("\nFloat \t\t %d\n",sizeof(float));
     cnt=charline(len,ch);
    
-    printf("\nFunction is called %d times\n",cnt);
+    printf("\nCharline Function is called %d times\n",cnt);
 
     return 0;
 }
