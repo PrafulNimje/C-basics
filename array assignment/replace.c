@@ -1,5 +1,5 @@
 // 8. Declare a string and accept its value. Accept a character from the user. 
-// Search the character in the string. If found, print "Found" and replace the character with X. If not found, print the message.
+// Search the character in the string. If found, print "Found" and replace the character with k. If not found, print the message.
 
 #include <stdio.h>
 #include <string.h>
@@ -7,7 +7,7 @@
 int main() {
     char str[10];
     char ch;
-    int i, found = 0;
+    int i=0, found = 0;
     int length=0;
 
     printf("Enter a string: ");
@@ -16,7 +16,9 @@ int main() {
     printf("Enter a character to search for: ");
     scanf(" %c", &ch);
 
-    length = strlen(str);
+    while(str[length]!='\0'){
+        length++;
+    }
 
     for (i = 0; i < length; i++) {
         if (str[i] == ch) {

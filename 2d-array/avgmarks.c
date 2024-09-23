@@ -3,7 +3,7 @@
 #include<string.h>
 
 void inputmarks(int [4][5]);
-void displayavg(int [][5]);
+void displayavg(int [4][5]);
 
 
 int main(){
@@ -30,14 +30,14 @@ void inputmarks(int st[4][5]){
 void displayavg(int st[4][5]){
 
     int i,j,sum=0; 
-    float avg;
+    int avg;
     for ( i = 0; i < 4; i++)
     {
         for ( j = 0; j < 5; j++)
         {
             sum = sum + st[j];
         }
-        avg = (float)sum/5;
-        printf("Average marks for student %d : %f\n",i+1,avg);
+        avg = sum/5;
+        printf("Average marks for student %d : %d\n",i+1,avg);
     }
 }
