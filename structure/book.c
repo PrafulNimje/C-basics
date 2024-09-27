@@ -1,5 +1,5 @@
 // Define a structure 'book' having members - bookid, title, price
-// Accept the data for a 3 book and display the record
+// Accept the data for a 5 book and display the record
 
 #include<stdio.h>
 
@@ -11,9 +11,9 @@ struct book
 };
 
 int main(){
-    struct book bk[3];
+    struct book bk[5];
 
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 5; i++)
     {
         printf("\nEnter details of book %d :\n",i+1);
         printf("Enter book ID: ");
@@ -28,7 +28,7 @@ int main(){
     }
     printf("\nBook Details:\n");
 
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 5; i++)
     {
         printf("Book %d Details:\n",i+1);
         printf("Book ID: %d\n",bk[i].bookid);
